@@ -66,7 +66,7 @@ Before writing any code, write out all desired tables in the data model and dete
 
 #### Data Access
 
-Write a data access file that exports an object with the following function:
+Write a data access file that exports an `object with the following function:
 
 - `getRecipeById(recipe_id)`
   - Should resolve a representation of the recipe similar to the one shown in the **Data Model** above.
