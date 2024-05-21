@@ -1,7 +1,12 @@
 const router = require('express').Router()
+const Recipe = require('./recipes-model')
 
-router.use('*', (req, res)=>{
-    res.json({api: 'up'})
+router.get('/:recipe_id', (req, res, next)=>{
+    Recipe.getRecipeById(req.params.recipe_id)
+    .then(resource=>{
+        res.status(200).json(resource)
+    })
+    .catch(next)
 })
 
 router.use((err, req, res, next)=>{ 
@@ -10,6 +15,7 @@ router.use((err, req, res, next)=>{
         message: err.message,
         stack: err.stack,
     })
+    .catch(next)
 })
 
 module.exports = router
