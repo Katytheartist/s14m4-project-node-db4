@@ -1,6 +1,6 @@
 const recipes = [
     {recipe_name: 'omelet'},
-    {recipe_name: 'bacon'},
+    {recipe_name: 'baked bacon'},
     {recipe_name: 'salad'},
 ]
 
